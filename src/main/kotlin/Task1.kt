@@ -4,7 +4,7 @@ import java.time.LocalDateTime
 abstract class Person(val firstName: String, val lastName: String, val birthDate: LocalDate, var address: String,
                       var city: String, var email: String, var telephone: String) {
 
-    fun fullName() = println("$firstName $lastName")
+    fun fullName() = "$firstName $lastName"
 }
 
 class Vet(firstName: String, lastName: String, birthDate: LocalDate,
@@ -42,7 +42,7 @@ class Owner(firstName: String, lastName: String, birthDate: LocalDate,
     var pets: MutableList<Pet> = mutableListOf()
 }
 
-data class Visit(val pet: Pet, val visitData: LocalDateTime, val vet: Vet, val visitType: VisitType) {
+data class Visit(val pet: Pet, val visitDate: LocalDateTime, val vet: Vet, val visitType: VisitType) {
 
 }
 
